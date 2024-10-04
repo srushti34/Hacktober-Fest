@@ -1,28 +1,12 @@
-x = 10
-y = "5"
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
 
+    def __eq__(self, other):
+    return self.title == other.title and self.author == other.author  
 
-if x > 5:
-    if y > 3: 
-        print("y is greater than 3")
-    elif x == 10:
-        print("x is exactly 10")
-    else:
-        print("This won't be printed, but it's here anyway")
+book1 = Book('Python Programming', 'John Doe')
+book2 = "Python Programming"  
 
-elif x < 5:
-    print("x is less than 5")
-
-
-else:
-    print("x is exactly 5")
-
-
-if x == "10": 
-    print("x is string 10")
-
-if y == 5:  
-    print("y is integer 5")
-
-else:
-    print("No match for y")
+print(book1 == book2)  

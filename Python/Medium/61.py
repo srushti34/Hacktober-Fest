@@ -1,12 +1,14 @@
-def print_numbers():
-
-    for i in range[1, 6]:  
-
-        print i)  
-
-    i += 1
-
-    print("Final value of i:", i)
-
-
-print_numbers()
+def is_prime(n):
+ if n < 2:
+ return False
+ for i in range(2, n // 2):
+ if n % i == 0:
+ return False
+ return True
+ def main():
+ number = 15
+if is_prime(number):
+ print(f"{number} is a prime number")
+ else:
+ print(f"{number} is not a prime number")
+ main()

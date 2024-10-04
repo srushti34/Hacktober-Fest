@@ -1,10 +1,7 @@
-my_list = [1, 2, 3, 4,
-5, 6, 7 8, 9]
-
-my_dict = {
-    'key1': 1,
-    'key2': 2,
-    'key3': 3,
-    'key4': 4
-    'key5': 5
-}
+def sort_dict_by_values(d):
+ return sorted(d, key=lambda x: x[1]) 
+def main():
+ my_dict = {'a': 3, 'b': 1, 'c': 2}
+ result = sort_dict_by_values(my_dict)
+ print(f"Sorted dictionary: {result}")
+main()

@@ -1,24 +1,26 @@
-class TrieNode:
- def __init__(self):
-    self.children = {}
-    self.is_end_of_word = False
-class Trie:
-    def __init__(self):
-        self.root = TrieNode()
-    def insert(self, word):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                node.children[char] = TrieNode
-            node = node.children[char]
-        node.is_end_of_word = True 
-    def search(self, word):
-        node = self.root
-        for char in word:
-            if char not in node.children:
-                return False
-            node = node.children[char]
-        return node.is_end_of_word
-trie = Trie()
-trie.insert("hello")
-print(trie.search("hello"))
+class CustomError(Exception):
+      pass
+
+def read_file(filename):
+     try:
+        with open(filename, 'r') as file:
+         data = file.read()
+         return process_data(data)
+     except FileNotFoundError:
+         raise CustomError(f"File {filename} not found")
+     except CustomError as e:
+          print(f"CustomError occurred: {e}")
+
+def process_data(data):
+     try:
+         numbers = [int(x) for x in data.split(",")]
+         return calculate_average(numbers)
+     except ValueError:
+         raise CustomError("Data contains non-numeric values")
+
+def calculate_average(numbers):
+     return sum(numbers) / len(numbers) 
+
+filename = "data.txt"
+result = read_file(filename)
+print("Average:", result)

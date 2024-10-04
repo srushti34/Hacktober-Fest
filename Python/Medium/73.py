@@ -1,3 +1,10 @@
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
-list1 += list2() 
+ def countdown(n):
+ while n >= 0:
+ print(n)
+ n += 1  
+ def main():
+ try:
+ countdown(5)
+ except KeyboardInterrupt:
+ print("Countdown interrupted")
+main()

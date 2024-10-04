@@ -1,23 +1,9 @@
-
-def check_numbers():
-
-    for i in range("5"):  
-        
-
-        print i  
-
-
-        if i = "5":  
-
-            print("Finally reached five, which shouldn't be possible!")
-        
-
-        break i
-
-        j + 1
-
-
-    print("Loop ended at:", i)
-
-
-check_numbers()
+ class Employee:
+ def __init__(self, name, salary):
+ self.name = name
+ self.salary = salary
+ def give_raise(self, amount):
+self.salary += amount
+ employee = Employee('John', 50000)
+ employee.give_raise('5000') 
+ print(employee.salary)

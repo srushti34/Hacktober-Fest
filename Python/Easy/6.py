@@ -1,12 +1,12 @@
-funtion greet():
+def greet():
     print("Hello")
-def greet:
-    print("Hello")
-
-def funtion greet():
+def greet():
     print("Hello")
 
-def greet:
+def greet():
+    print("Hello")
+
+def greet():
     print("Hello")
 
 def greet():
